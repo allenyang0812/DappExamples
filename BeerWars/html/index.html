@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dapp Example on VMware Blockchain</title>
+    <link rel='stylesheet', href='/css/bootstrap.min.css' />
+    <link rel='stylesheet', href='/css/styles.css' />
+  </head>
+  <body>
+<input class="btn btn-info btn-lg btn-block" type="submit" value="BeerWars Application"></input>
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-buybeer-tab" data-toggle="pill" href="#pills-buybeer" role="tab" aria-controls="pills-buybeer" aria-selected="true">BuyBeer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-drinkbeer-tab" data-toggle="pill" href="#pills-drinkbeer" role="tab" aria-controls="pills-drinkbeer" aria-selected="false">DrinkBeer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-getnumberofbeers-tab" data-toggle="pill" href="#pills-getnumberofbeers" role="tab" aria-controls="pills-getnumberofbeers" aria-selected="false">GetNumberOfBeers</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-transferbeer-tab" data-toggle="pill" href="#pills-transferbeer" role="tab" aria-controls="pills-transferbeer" aria-selected="false">TransferBeer</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-addname-tab" data-toggle="pill" href="#pills-addname" role="tab" aria-controls="pills-addname" aria-selected="false">AddName</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="pills-removename-tab" data-toggle="pill" href="#pills-removename" role="tab" aria-controls="pills-removename" aria-selected="false">RemoveName</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-buybeer" role="tabpanel" aria-labelledby="pills-buybeer-tab">
+   <form action="/index/buyBeer" method="POST">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-user">User</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-user" name="username">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-amount">Amount</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-amount" name="amount" value="1" disabled="true">
+    </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"></input>          
+   </form>
+  </div>
+  <div class="tab-pane fade" id="pills-drinkbeer" role="tabpanel" aria-labelledby="pills-drinkbeer-tab">
+   <form action="/index/drinkBeer" method="POST">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-user">User</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-user" name="username">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-amount">Amount</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-amount" name="amount" value="1" disabled="true">
+    </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"></input>          
+  </form>
+  </div>
+  <div class="tab-pane fade" id="pills-getnumberofbeers" role="tabpanel" aria-labelledby="pills-getnumberofbeers-tab">
+   <form action="/index/getNumberOfBeers" method="POST">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-user">User</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-user" name="username">
+    </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"></input>          
+  </form>
+  </div>
+  <div class="tab-pane fade" id="pills-transferbeer" role="tabpanel" aria-labelledby="pills-transferbeer-tab">
+   <form action="/index/transferBeer" method="POST">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-fromuser">FromUser</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-fromuser" name="fromname">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-touser">ToUser</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-touser" name="toname">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-amount">Amount</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-amount" name="amount" value="1" disabled="true">
+    </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"></input>          
+  </form>
+  </div>
+  <div class="tab-pane fade" id="pills-addname" role="tabpanel" aria-labelledby="pills-addname-tab">
+   <form action="/index/addName" method="POST">
+   
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-user">User</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-user" name="username">
+    </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"></input>          
+  </form>
+  </div>
+  <div class="tab-pane fade" id="pills-removename" role="tabpanel" aria-labelledby="pills-removename-tab">
+   <form action="/index/removeName" method="POST">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-user">User</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-user" name="username">
+    </div>
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value="Submit"></input>          
+  </form>
+  </div>
+</div>
+ 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+  </body>
+</html>
